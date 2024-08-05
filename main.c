@@ -15,9 +15,9 @@ Stack* createStack(int capacity); // creates a stack
 void destroy_stack(Stack* stack); // release stack from memory
 bool is_full(Stack* stack);       // checks whether the stack is full or not
 bool is_empty(Stack* stack);      // checks whether the stack is empty or not
-bool pop(Stack* stack, int* item);// we'll get the staff out of the stack
+bool pop(Stack* stack, int* item);// we'll get the element out of the stack
 bool push(Stack* stack, int item);// we add elements to the stack
-bool peek(Stack* stack, int* item);// freezes the last element in the stack (the top one)
+bool peek(Stack* stack, int* item);// shows the last element in the stack (the top one)
 
 int main() {
     Stack* stack = createStack(STACKSIZE);
@@ -57,7 +57,7 @@ int main() {
                 printf("Stack size %d\n", stack->size);// gives the number of elements in the stack
                 break;
             case 5:
-                for(int i = 0 ; i < stack->size; i++){// shows us stack elements
+                for(int i = 0 ; i < stack->size; i++){// shows us elements in the stack
                     printf(" %d |", stack->collection[i]);
                 }
                 break;
@@ -115,7 +115,7 @@ bool is_empty(Stack* stack) { // checks whether the stack is empty or not
     return stack->size == 0;
 }
 
-bool pop(Stack* stack, int* item) { // we'll get the staff out of the stack
+bool pop(Stack* stack, int* item) { // we'll get the element out of the stack
     if (is_empty(stack)) return false; // if stack is empty, returns false
 
     stack->size--; // the size is reduced by one
@@ -131,7 +131,7 @@ bool push(Stack* stack, int item) { // we add elements to the stack
     return true; // if it is success, returns true
 }
 
-bool peek(Stack* stack, int* item) { // freezes the last element in the stack (the top one)
+bool peek(Stack* stack, int* item) { // shows the last element in the stack (the top one)
     if (is_empty(stack)) return false; // if stack is empty, returns false
 
     *item = stack->collection[stack->size - 1]; // the last element is assigned to the item
