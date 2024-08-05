@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1722859255 source:c:\users\durma\videos\c\cod bloks\alýþtýrma\öðrenim\stack process\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
