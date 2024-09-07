@@ -1,6 +1,6 @@
 
 
-# Project Name: File Operations
+# Project Name: Stack Process with Menu
 
 Date: 05.08.2024  
 I have done for you to study for stack process. In this project, I used 8 function. They are menu, createStack, destroy_Stack, is_full, is_empty, pop, push, and peek functions.
